@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
         const AppLocalizationsDelegate(),
       ],
       supportedLocales: [
-        const Locale('en', ''), // English
         const Locale('es', ''), // Spanish
+        const Locale('en', ''), // English
       ],
       home: MyHomePage(),
     );
@@ -31,12 +31,18 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
+    Locale myLocale = Localizations.localeOf(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.title),
       ),
-      body: Center(
-        child: Text(l10n.register),
+      body: Column(
+        children: <Widget>[
+          Text(myLocale.toString()),
+          Center(
+            child: Text(l10n.register),
+          ),
+        ],
       ),
     );
   }
