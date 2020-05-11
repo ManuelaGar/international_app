@@ -1,0 +1,15 @@
+{
+  "@@last_modified": "2020-05-11T10:51:48.428341",
+  "title": "Hello World",
+  "@title": {
+    "description": "Title for the Demo application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "register": "Register",
+  "@register": {
+    "description": "App register btn",
+    "type": "text",
+    "placeholders": {}
+  }
+}

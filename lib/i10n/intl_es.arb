@@ -1,0 +1,16 @@
+{
+  "@@locale": "es",
+  "@@last_modified": "2020-05-11T10:16:26.496887",
+  "title": "Hola Mundo",
+  "@title": {
+    "description": "App title",
+    "type": "text",
+    "placeholders": {}
+  },
+  "register": "Registro",
+  "@register": {
+    "description": "App register btn",
+    "type": "text",
+    "placeholders": {}
+  }
+}

@@ -1,9 +1,11 @@
 import 'package:intl/intl.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:internationalapp/l10n/messages_all.dart';
+import 'package:internationalapp/i10n/messages_all.dart';
 
 class AppLocalizations {
+  AppLocalizations(this.localeName);
+
   static Future<AppLocalizations> load(Locale locale) {
     final String name =
         locale.countryCode.isEmpty ? locale.languageCode : locale.toString();
@@ -11,13 +13,15 @@ class AppLocalizations {
 
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
-      return AppLocalizations();
+      return AppLocalizations(localeName);
     });
   }
 
   static AppLocalizations of(BuildContext context) {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
+
+  final String localeName;
 
   String get title => Intl.message(
         'Hello World',
