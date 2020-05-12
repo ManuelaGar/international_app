@@ -9,6 +9,7 @@ class AppLocalizations {
   static Future<AppLocalizations> load(Locale locale) {
     final String name =
         locale.countryCode.isEmpty ? locale.languageCode : locale.toString();
+
     final String localeName = Intl.canonicalizedLocale(name);
 
     return initializeMessages(localeName).then((_) {
@@ -50,5 +51,5 @@ class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
 }
 
 // In terminal run:
-// flutter pub pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/lang/app_localizations.dart
-// flutter pub pub run intl_translation:generate_from_arb lib/lang/app_localizations.dart lib/l10n/*.arb --output-dir=lib/l10n
+// flutter pub pub run intl_translation:extract_to_arb --output-dir=lib/i10n lib/lang/app_localizations.dart
+// flutter pub pub run intl_translation:generate_from_arb lib/lang/app_localizations.dart lib/i10n/*.arb --output-dir=lib/i10n
