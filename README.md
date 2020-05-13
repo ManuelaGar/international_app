@@ -24,6 +24,10 @@ supportedLocales: [
   const Locale('es', ''),
  ],
  ```
- 8. Update the languages in ios/Runner/info.plist accordingly
+ 8. Update the languages in ios/Runner/info.plist accordingly in Xcode.
+ 
+ ![Screenshot](https://i.postimg.cc/Jz2RB6Fx/Captura-de-Pantalla-2020-05-13-a-la-s-9-15-19-a-m.png)
+ 
  9. Start adding the translations in your code, in the app_localizations.dart file.
- Note: Every time you change the app_localizations.dart file you must re-run steps 4 and 6. Check inside any of the .dart files inside the i10n folder to see if the new translations were added successfully.
+ 
+ *Note: Every time you change the app_localizations.dart file you must re-run steps 4 and 6. Check inside any of the .dart files inside the i10n folder to see if the new translations were added successfully.
